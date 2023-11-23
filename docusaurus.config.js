@@ -6,10 +6,12 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
+//
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '思道阁',
-  tagline: '真正高明的人，就是能够借助别人的智慧，来使自己不受蒙蔽',
+  tagline: '真正高明的人，能够借助别人的智慧，来使自己不受蒙蔽',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -39,19 +41,42 @@ const config = {
     defaultLocale: 'zh-Hans',
     locales: ['zh-Hans'],
   },
-
+  plugins:[
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id:"shuYuanTang",
+        path: '书源堂',
+        routeBasePath: '书源堂',
+        sidebarPath: './sidebars.js',
+      }
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id:"zhiYuanShi",
+        path: '知源室',
+        routeBasePath: '知源室',
+        sidebarPath: './sidebars.js',
+      }
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id:"tanXinXuan",
+        path: '探新轩',
+        routeBasePath: '探新轩',
+        sidebarPath: './sidebars.js',
+      }
+    ]
+  ],
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        docs: false,
+        debug:false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -72,28 +97,22 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
             position: 'left',
             label: '书源堂',
+            to: '/书源堂/书源堂',
+            docId:"shuYuanTang"
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
             position: 'left',
             label: '知源室',
+            to: '/知源室/知源室',
+            docId:"zhiYuanShi"
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
             position: 'left',
             label: '探新轩',
+            to: '/探新轩/探新轩',
+            docId:"tanXinXuan"
           },
           {
             href: 'https://github.com/dingguangyi0',
@@ -106,36 +125,30 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '思道阁',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: '书源堂',
+                to: '/书源堂/书源堂',
+                docId:"shuYuanTang"
               },
+              {
+                label: '知源室',
+                to: '/知源室/知源室',
+                docId:"zhiYuanShi"
+              },
+              {
+                label: '探新轩',
+                to: '/探新轩/探新轩',
+                docId:"tanXinXuan"
+              }
             ],
           },
           {
-            title: 'Community',
+            title: '左岸',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: '更多',
-            items: [
-              {
-                label: '左岸',
+                label: '博客',
                 href: 'https://www.ycdr.fun',
               },
               {
@@ -155,3 +168,4 @@ const config = {
 };
 
 export default config;
+
