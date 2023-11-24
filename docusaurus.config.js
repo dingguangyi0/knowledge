@@ -115,6 +115,11 @@ const config = {
             docId:"tanXinXuan"
           },
           {
+            href: 'https://www.ycdr.fun',
+            label: '左岸',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/dingguangyi0',
             label: 'GitHub',
             position: 'right',

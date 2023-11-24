@@ -25,3 +25,5 @@ yarn-error.log*
 # Docusaurus Build Directory
 /build/
 node_modules
+
+deployment.sh
