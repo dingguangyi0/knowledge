@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-title: nvm版本管理器使用
+sidebar_position: 2
+title: node.js常用工具使用
 ---
 ## node.js常用工具使用
 ### nrm 
