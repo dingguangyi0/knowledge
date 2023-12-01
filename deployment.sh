@@ -1,4 +1,6 @@
-#!/bin/bash  
+#!/bin/bash
+## 开启异常退出
+set -e
 
 echo "执行编译"
 npm run build

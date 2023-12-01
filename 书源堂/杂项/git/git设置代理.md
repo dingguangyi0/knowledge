@@ -1,7 +1,6 @@
 ---
 sidebar_position: 10
 title: git设置代理
-date: 2023年12月01日 11:10:42
 ---
 
 ## 缘起
@@ -19,10 +18,10 @@ git config --global http.proxy http://<proxy_server>:<port>
 
 **当前目录设置**
 ```shell
-git config http.proxy http://<proxy_server>:<port>
-git config https.proxy http://<proxy_server>:<port>
+git config http.proxy http://proxy_server:port
+git config https.proxy http://proxy_server:port
 ```
-将<proxy_server>替换为代理服务器地址，将<port>替换为代理服务器端口号。例如，如果你的代理服务器地址是example.com，端口号是8080，那么命令应该是：
+将proxy_server替换为代理服务器地址，将port替换为代理服务器端口号。例如，如果你的代理服务器地址是example.com，端口号是8080，那么命令应该是
 
 > 示例
 
@@ -50,7 +49,7 @@ git config https.proxy
 git config --global -unset http.proxy
 git config --global -unset https.proxy
 
-## 协助当前目录设置
+## 卸载当前目录设置
 git config -unset http.proxy
 git config -unset https.proxy
 ```
