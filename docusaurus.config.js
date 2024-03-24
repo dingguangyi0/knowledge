@@ -45,6 +45,15 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        id:"yunti",
+        path: 'yunti',
+        routeBasePath: 'yunti',
+        sidebarPath: './sidebars.js',
+      }
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         id:"shuYuanTang",
         path: '书源堂',
         routeBasePath: '书源堂',
@@ -98,6 +107,12 @@ const config = {
         items: [
           {
             position: 'left',
+            label: '云梯',
+            to: '/yunti/云梯',
+            docId:"yunti"
+          },
+          {
+            position: 'left',
             label: '书源堂',
             to: '/书源堂/书源堂',
             docId:"shuYuanTang"
@@ -132,6 +147,11 @@ const config = {
           {
             title: '思道阁',
             items: [
+              {
+                label: 'yunti',
+                to: '/yunti/云梯',
+                docId:"yunti"
+              },
               {
                 label: '书源堂',
                 to: '/书源堂/书源堂',

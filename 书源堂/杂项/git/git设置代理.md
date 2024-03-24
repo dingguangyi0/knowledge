@@ -19,7 +19,7 @@ git config --global http.proxy http://<proxy_server>:<port>
 **当前目录设置**
 ```shell
 git config http.proxy http://proxy_server:port
-git config https.proxy http://proxy_server:port
+git config https.proxy https://proxy_server:port
 ```
 将proxy_server替换为代理服务器地址，将port替换为代理服务器端口号。例如，如果你的代理服务器地址是example.com，端口号是8080，那么命令应该是
 
